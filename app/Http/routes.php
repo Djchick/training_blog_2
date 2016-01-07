@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/language/{language}', function ($language) {
+    Session::put('language', $language);
+    return redirect('/auth/login');
+});
