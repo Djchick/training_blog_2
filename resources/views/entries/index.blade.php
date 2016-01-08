@@ -1,9 +1,18 @@
 @extends('layouts.app')
+@section('menu')
+<div>
+    <ul class="nav navbar-nav">
+        <li><a href="#">{!! trans('messages.create_entry') !!}</a></li>
+        <li><a href="#">{!! trans('messages.members') !!}</a></li>
+    </ul>
+</div>
+@endsection
 @section('content')
 <div class="container">
     <center>
         <h1>{!! trans('messages.training_blog') !!}</h1>      
     </center>
+</div>
     @foreach ($entries as $entry)
         <h2>{!! trans('messages.entry_title') !!}: {!! $entry->title !!}</h2>
         <h4>{!! trans('messages.posted_by') !!}: {!! $entry->user->name !!}</h4>
@@ -13,9 +22,9 @@
         @foreach ($entry->comments as $comment)
             <h4>{!! trans('messages.commented_by') !!}: {!! $comment->user->name !!}</h4>
             <h4>{!! trans('messages.commented_at') !!}: {!! $comment->created_at !!}</h4>
-            <p>{{ $comment->comment }}</p><br>
+            {{ $comment->comment }}<br>
         @endforeach
     @endforeach
 </div>
-<center>{!! $entries->render() !!}</center>
+<center>{!! $entries->appends(['user_type' => 'all'])->render() !!}</center>
 @endsection

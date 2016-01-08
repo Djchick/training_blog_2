@@ -22,7 +22,6 @@ Route::group(['namespace' => 'Auth', 'prefix' => 'auth', 'as' => 'auth'], functi
     Route::get('register', 'AuthController@getRegister');
     Route::post('register', 'AuthController@postRegister');
 });
-
 Route::get('/home', function () {
     if (\Auth::user()) {
         return view('user.home');
@@ -30,3 +29,4 @@ Route::get('/home', function () {
         return redirect('/');
     }
 });
+Route::resource('entries', 'EntriesController');
