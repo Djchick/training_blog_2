@@ -3,7 +3,7 @@
 <div>
     <ul class="nav navbar-nav">
         <li>{!! Html::linkAction('EntriesController@create', trans('messages.create_entry')) !!}</li>
-        <li><a href="#">{!! trans('messages.members') !!}</a></li>
+        <li>{!! Html::linkAction('UsersController@index', trans('messages.unfollowings')) !!}</li>
     </ul>
 </div>
 @endsection

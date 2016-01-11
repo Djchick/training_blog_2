@@ -24,4 +24,6 @@ return [
     'title' => 'শিরোনাম',
     'details' => 'বিবরণ',
     'add_an_entry' => 'একটি এনট্রি যোগ করুন',
+    'unfollowings' => 'অনুগামী না',
+    'follow' => 'অনুসরণ করা',
 ];
