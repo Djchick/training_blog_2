@@ -17,5 +17,7 @@ return [
     'commented_by' => 'Commented By',
     'commented_at' => 'Commented At',
     'entry_title' => 'Entry Title',
-    'comment' => 'Comments'
+    'comment' => 'Comments',
+    'following_posts' => 'Following Posts',
+    'all_posts' => 'All Post',
 ];

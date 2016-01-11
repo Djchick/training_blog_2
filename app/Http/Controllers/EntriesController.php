@@ -20,11 +20,14 @@ class EntriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        if (!\Auth::user()) {
+        if (!\Auth::user() || $request->input('user_type') == 'all') {
             $entries = $this->entries->allEntries();
             return view('entries.index', compact('entries'));
+        } else {      
+            $followings = \Auth::user()->followings()->with('entries')->paginate(\Config::get('paginate.paginate_no'));
+            return view('followings.entries.index', compact('followings'));
         }
     }
 

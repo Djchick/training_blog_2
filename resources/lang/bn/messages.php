@@ -17,5 +17,7 @@ return [
     'commented_by' => 'মন্তব্য করেছিল',
     'commented_at' => 'সময়',
     'entry_title' => 'এন্ট্রি শিরোনাম',
-    'comment' => 'মন্তব্য'
+    'comment' => 'মন্তব্য',
+    'following_posts'=> 'অনুসরণ পোস্ট',
+    'all_posts' => 'সকল পোস্ট',
 ];
