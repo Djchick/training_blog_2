@@ -20,4 +20,8 @@ return [
     'comment' => 'মন্তব্য',
     'following_posts'=> 'অনুসরণ পোস্ট',
     'all_posts' => 'সকল পোস্ট',
+    'add' => 'যোগ',
+    'title' => 'শিরোনাম',
+    'details' => 'বিবরণ',
+    'add_an_entry' => 'একটি এনট্রি যোগ করুন',
 ];

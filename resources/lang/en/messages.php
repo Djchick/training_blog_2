@@ -1,4 +1,4 @@
- <?php
+<?php
 return [
     'login' => 'Login',
     'logout' => 'Log out',
@@ -20,4 +20,8 @@ return [
     'comment' => 'Comments',
     'following_posts' => 'Following Posts',
     'all_posts' => 'All Post',
+    'add' => 'Add',
+    'title' => 'Title',
+    'details' => 'Details',
+    'add_an_entry' => 'Add an entry'
 ];

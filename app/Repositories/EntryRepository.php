@@ -16,4 +16,8 @@ class EntryRepository
     {
         return Entry::with('user')->with('comments')->orderBy('created_at', 'desc')->paginate(\Config::get('paginate.paginate_no'));
     }
+    public function createEntry($input)
+    {
+        return Entry::create($input);
+    }
 }

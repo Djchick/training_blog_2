@@ -38,7 +38,7 @@ class EntriesController extends Controller
      */
     public function create()
     {
-        //
+        return view('entries.create');
     }
 
     /**
@@ -49,7 +49,10 @@ class EntriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        $input['user_id'] = \Auth::user()->id;
+        $this->entries->createEntry($input);
+        return back();
     }
 
     /**

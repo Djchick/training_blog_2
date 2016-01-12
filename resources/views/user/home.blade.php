@@ -2,7 +2,7 @@
 @section('menu')
 <div>
     <ul class="nav navbar-nav">
-        <li><a href="#">{!! trans('messages.create_entry') !!}</a></li>
+        <li>{!! Html::linkAction('EntriesController@create', trans('messages.create_entry')) !!}</li>
         <li><a href="#">{!! trans('messages.members') !!}</a></li>
     </ul>
 </div>
