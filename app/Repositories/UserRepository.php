@@ -18,4 +18,11 @@ class UserRepository
         $followings = \Auth::user()->followings;
         return User::whereNotIn('id', $followings->lists('id'))->where('id', '!=', \Auth::user()->id)->get();
     }
+    public function save($request)
+    {
+        $newFollower = new Follow;
+        $newFollower->follow_id = $request->input('follow_id');
+        $newFollower->user_id = \Auth::user()->id;
+        return $newFollower->save();
+    }
 }

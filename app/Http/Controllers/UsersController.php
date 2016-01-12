@@ -25,4 +25,15 @@ class UsersController extends Controller
         $otherUsers = $this->users->unfollowings();
         return view('user.index', compact('otherUsers'));      
     }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $this->users->save($request);
+        return back();
+    }
 }
