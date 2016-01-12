@@ -7,7 +7,7 @@
     @foreach ($otherUsers as $otherUser)
         <h2>{!! trans('messages.name') !!}: {!! $otherUser->name !!}</h2>
         {!! Form::open(['action' => 'UsersController@store']) !!}
-            {!! Form::hidden('yetToFollow', $otherUser->id) !!}
+            {!! Form::hidden('follow_id', $otherUser->id) !!}
             {!! Form::submit(trans('messages.follow')) !!}
         {!! Form::close() !!}
     @endforeach
