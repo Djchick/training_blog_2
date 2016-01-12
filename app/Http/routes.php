@@ -30,3 +30,4 @@ Route::get('/home', function () {
     }
 });
 Route::resource('entries', 'EntriesController');
+Route::resource('users', 'UsersController');

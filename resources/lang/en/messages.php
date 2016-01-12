@@ -23,5 +23,7 @@ return [
     'add' => 'Add',
     'title' => 'Title',
     'details' => 'Details',
-    'add_an_entry' => 'Add an entry'
+    'add_an_entry' => 'Add an entry',
+    'unfollowings' => 'Unfollowings',
+    'follow' => 'Follow',
 ];
