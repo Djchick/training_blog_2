@@ -31,3 +31,4 @@ Route::get('/home', function () {
 });
 Route::resource('entries', 'EntriesController');
 Route::resource('users', 'UsersController');
+Route::post('comments', 'CommentsController@store');

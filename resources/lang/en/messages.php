@@ -26,4 +26,6 @@ return [
     'add_an_entry' => 'Add an entry',
     'unfollowings' => 'Unfollowings',
     'follow' => 'Follow',
+    'make_comment' => 'Make Comment',
+    'add' => 'Add',
 ];
